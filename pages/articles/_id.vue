@@ -8,7 +8,7 @@
 //import hello from "../content/articles.md";
 export default {
   async asyncData({ params }) {
-    const file = await import(`../../static/content/${params.id}.md`);
+    const file = await import(`../../content/articles/${params.id}.md`);
     //console.log(params.id);
     return { markdown: file.default };
   }

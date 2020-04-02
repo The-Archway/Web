@@ -1,3 +1,5 @@
+import articles from './content/articles.json';
+
 export default {
   mode: 'universal',
   /*
@@ -31,9 +33,8 @@ export default {
   plugins: [
   ],
   generate: {
-    routes: [
-      '/articles/how-to-value-stocks-using-eps-part-1'
-    ]
+    //routes: articles.map(x => `/articles/${x.route}`)
+    routes: articles.map(x => x.route)
   },
   /*
   ** Nuxt.js dev-modules

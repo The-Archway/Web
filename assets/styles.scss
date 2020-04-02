@@ -1,0 +1,24 @@
+/* custom.scss */    
+
+/* import the necessary Bootstrap files */
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+/* -------begin customization-------- */   
+
+/* simply assign the value */ 
+$body-bg: #fff;
+
+$theme-colors: (
+    primary: $black,
+    secondary: $red
+);
+/* -------end customization-------- */  
+
+/* finally, import Bootstrap to set the changes! */
+@import "bootstrap";
+
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+body{
+    font-family: Rubik;
+}

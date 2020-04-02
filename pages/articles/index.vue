@@ -3,7 +3,7 @@
     <h1>Articles</h1>
     <b-card v-for="article in data" :key="article.route" v-bind:title="article.title">
       <b-card-text>{{article.description}}</b-card-text>
-      <a v-bind:href="article.route">Read</a>
+      <b-button v-bind:href="article.route">Read</b-button>
     </b-card>
   </b-container>
 </template>

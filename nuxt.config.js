@@ -30,6 +30,11 @@ export default {
   */
   plugins: [
   ],
+  generate: {
+    routes: [
+      '/articles/how-to-value-stocks-using-eps-part-1'
+    ]
+  },
   /*
   ** Nuxt.js dev-modules
   */

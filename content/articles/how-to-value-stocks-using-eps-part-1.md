@@ -13,7 +13,7 @@ If you look at Acme Company's 10-K (its yearly SEC Filing), you will see the las
 
 Using a company's EPS from its 10-K is great, but what do we do if we are in the middle of the year? We would rather not wait an entire year to compute a company's stock price. Luckily, the SEC requires additional filings throughout the year. The second most commonly used filing is the 10-Q. A 10-Q is almost the same as a 10-K except that it is filed every _quarter_. This allows us to compute our stock price more frequently.   
 
-Computing a company's stock price using a 10-Q is almost the same as a 10-K except it requires us to look at more than one document. The only real complication comes from Q4. Companies' do not file a 10-Q in the fourth quarter - only a 10-K. So, we'll need to do a little math to figure out our Q4 EPS. To get our Q4 EPS, we'll need to subtract the sum of Q1-Q3 from the 10K of the same year. Let's take a look at our Acme Company.  
+Computing a company's stock price using a 10-Q is almost the same as a 10-K except it requires us to look at more than one document. The only real complication comes from Q4. Companies do not file a 10-Q in the fourth quarter - only a 10-K. So, we'll need to do a little math to figure out our Q4 EPS. To get our Q4 EPS, we'll need to subtract the sum of Q1-Q3 from the 10K of the same year. Let's take a look at our Acme Company.  
 
 >##### Acme Company
 >|Year (TTM) | 2019 (10-K)  | 2019 (Q3)  | 2019 (Q2)  | 2019 (Q1)  |

@@ -1,14 +1,14 @@
 <template>
   <b-container>
     <b-navbar toggleable type="dark" variant="light">
-      <b-nav-form inline>
+      <b-nav-form inline @submit="search">
         <b-form-input size="sm" class="mr-sm-2" placeholder="Symbol" v-model="searchText"></b-form-input>
         <b-button size="sm" class="my-2 my-sm-0" @click="search">Search</b-button>
       </b-nav-form>
       <b-spinner label="Loading..." v-if="searching"></b-spinner>
       <b-nav-form inline v-if="fields.length > 0">
         <b-form-select
-          style="overflow-x: hidden;overflow-y: auto;"
+          style="width: 100%;"
           v-model="selected"
           :options="fields"
           multiple
@@ -33,7 +33,7 @@ export default {
     };
   },
   methods: {
-    search: function() {
+    search: function(e) {
       this.fields = [];
       this.searching = true;
       const url = `https://vueserver-bkplaamqqa-ue.a.run.app/?symbol=${this.searchText}`;
@@ -50,6 +50,8 @@ export default {
           console.log(error);
           this.searching = false;
         });
+
+        e.preventDefault();
     }
   }
 };

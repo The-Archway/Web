@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <section class="banner">
-      <img src="images/pexels-photo-241544.jpeg" />
-    </section>
+  <div class="home-container">
     <b-container>
       <b-row>
         <b-col>
@@ -34,12 +31,14 @@ export default {
 };
 </script>
 <style>
-.banner {
-  display: flex;
+body{
+  background-color: #000;
 }
-.banner img {
-  position: absolute;
-  width: 100%;
+.home-container {
+  background: url('/images/pexels-photo-241544.jpeg'); 
+  background-position: center; 
+  height: 500px;
+  padding: 30px 0px;
 }
 .title,
 .subtitle {
@@ -51,7 +50,5 @@ export default {
 .links {
   margin: 30px 0;
 }
-.row {
-  margin: 30px 0px;
-}
+
 </style>
